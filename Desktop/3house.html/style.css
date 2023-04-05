@@ -1,0 +1,14 @@
+ body{
+ 	display: flex;
+ 	flex-direction: row;
+ 	height: 100vh;
+ 	justify-content: space-around;
+ }
+ .house{
+    display: flex;
+    flex-direction: column;
+    width:30vw;
+ }
+ .heading{
+ 	color: green;
+ }
