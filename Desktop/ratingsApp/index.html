@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rating App</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="app.js"></script>
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="wrapper"> 
+   <h2>How did we do?</h2>
+   <p>please let us know how we did with<br> your support<br>
+    request.All feedback is appreciated to<br> help us
+    improve our offering.</p>
+  </div>
+ <div class="numbers">
+   <button type="button" class="btn" >1</button>
+   <button type="button" class="btn">2</button>
+   <button type="button" class="btn">3</button>
+   <button type="button" class="btn">4</button>
+   <button type="button" class="btn">5</button>
+ </div>
+
+
+<div class="submit">
+<button id="myBtn">Submit</button>
+</div>
+
+<div id="myRating" class="modal">
+
+
+  <div class="rating-content">
+    <span class="close">&times;</span> 
+    <button>You selected 4 out of 5</button>
+    <h2>Thank you!</h2>
+    <p>We appreciate you taking the time to<br> give
+       a rating.<br>If you ever need more supprt,don't<br> 
+       hesitate to get in touch!
+    </p>
+  </div>
+
+</div>
+
+
+<script>
+// Get the rating
+var modal = document.getElementById("myRating");
+
+// Get the button that submits the rating
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the rating
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, Submit 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the rating
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the ratebox, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html> 
